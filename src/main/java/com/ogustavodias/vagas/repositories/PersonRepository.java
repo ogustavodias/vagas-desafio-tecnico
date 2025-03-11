@@ -1,4 +1,4 @@
-package com.ogustavodias.vagas.repositorys;
+package com.ogustavodias.vagas.repositories;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 
 import com.ogustavodias.vagas.dto.PersonInsertDTO;
 import com.ogustavodias.vagas.models.Person;
-import com.ogustavodias.vagas.repositorys.PersonRepository;
+import com.ogustavodias.vagas.repositories.PersonRepository;
 
 @Service
 public class PersonService {

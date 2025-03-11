@@ -12,7 +12,7 @@ import com.ogustavodias.vagas.dto.PersonWithScoreDTO;
 import com.ogustavodias.vagas.models.DistanceCoordenates;
 import com.ogustavodias.vagas.models.Job;
 import com.ogustavodias.vagas.models.Person;
-import com.ogustavodias.vagas.repositorys.JobRepository;
+import com.ogustavodias.vagas.repositories.JobRepository;
 
 import jakarta.persistence.EntityNotFoundException;
 
