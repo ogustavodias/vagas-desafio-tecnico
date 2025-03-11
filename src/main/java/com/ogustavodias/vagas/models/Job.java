@@ -38,6 +38,8 @@ public class Job {
 
   @Enumerated(EnumType.STRING)
   private Location location;
+
+  @Enumerated(EnumType.STRING)
   private ExpLevel expLevel;
 
   @ManyToMany(mappedBy = "applications")

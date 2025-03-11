@@ -1,6 +1,7 @@
 package com.ogustavodias.vagas.services;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import com.ogustavodias.vagas.dto.JobInsertDTO;
 import com.ogustavodias.vagas.dto.PersonWithScoreDTO;
+import com.ogustavodias.vagas.models.DistanceCoordenates;
 import com.ogustavodias.vagas.models.Job;
 import com.ogustavodias.vagas.models.Person;
 import com.ogustavodias.vagas.repositorys.JobRepository;
@@ -36,8 +38,13 @@ public class JobService {
     List<PersonWithScoreDTO> personsWithScore = new ArrayList<>();
 
     for (Person person : job.getApplications()) {
-      personsWithScore.add(PersonWithScoreDTO.fromPersonEntity(person, 0));
+      Integer nScore = 100 - 25 * Math.abs(job.getExpLevel().getCod() - person.getExpLevel().getCod());
+      Integer dScore = DistanceCoordenates.getScoreOfDistance(job.getLocation().name(), person.getLocation().name());
+      Integer score = (nScore + dScore) / 2;
+      personsWithScore.add(PersonWithScoreDTO.fromPersonEntity(person, score));
     }
+
+    personsWithScore.sort(Comparator.comparingInt(PersonWithScoreDTO::score).reversed());
 
     return personsWithScore;
   }

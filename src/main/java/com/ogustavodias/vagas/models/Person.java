@@ -41,6 +41,8 @@ public class Person {
 
   @Enumerated(EnumType.STRING)
   private Location location;
+
+  @Enumerated(EnumType.STRING)
   private ExpLevel expLevel;
 
   @ManyToMany

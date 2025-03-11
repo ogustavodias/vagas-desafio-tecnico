@@ -59,8 +59,27 @@ public class DistanceCoordenates {
     distances.put("F", F);
   }
 
-  public Integer getDistanceOf(String origin, String destination) {
+  public static Integer getDistanceOf(String origin, String destination) {
     return distances.get(origin).get(destination);
+  }
+
+  public static Integer getScoreOfDistance(String origin, String destination) {
+    Integer minDistance = origin == destination ? 0 : getDistanceOf(origin, destination);
+
+    if (minDistance <= 5)
+      return 100;
+    else if (minDistance <= 10)
+      return 75;
+    else if (minDistance <= 15)
+      return 50;
+    else if (minDistance <= 20)
+      return 25;
+    else
+      return 0;
+  }
+
+  public static Map<String, Map<String, Integer>> getDistances() {
+    return distances;
   }
 
 }

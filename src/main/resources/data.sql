@@ -5,19 +5,19 @@ VALUES
     'Gustavo Alves Dias',
     'Desenvolvedor FullStack',
     'A',
-    2
+    'TRAINEE'
   ),
   (
     'Larissa Rodrigues Oliveira',
     'Desenvolvedora FrontEnd',
     'C',
-    4
+    'JUNIOR'
   ),
   (
     'Alex Teodoro da Silva',
     'Analista de Dados',
     'C',
-    3
+    'SPECIALIST'
   );
 
 INSERT INTO
@@ -28,14 +28,14 @@ VALUES
     'Desenvolvedor FullStack Jr',
     'Venha contribuir com o nosso time de desenvolvedores.',
     'A',
-    2
+    'JUNIOR'
   ),
   (
     'Azul Seguros',
     'Analista de Dados Sr',
     'Venha contribuir com o nosso time de dados.',
-    'A',
-    4
+    'C',
+    'SPECIALIST'
   );
 
 INSERT INTO
@@ -43,4 +43,5 @@ INSERT INTO
 VALUES
   (1, 1),
   (1, 2),
+  (1, 3),
   (2, 3);
