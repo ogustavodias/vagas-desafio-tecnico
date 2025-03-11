@@ -12,6 +12,12 @@ VALUES
     'Desenvolvedora FrontEnd',
     'C',
     4
+  ),
+  (
+    'Alex Teodoro da Silva',
+    'Analista de Dados',
+    'C',
+    3
   );
 
 INSERT INTO
@@ -23,10 +29,18 @@ VALUES
     'Venha contribuir com o nosso time de desenvolvedores.',
     'A',
     2
+  ),
+  (
+    'Azul Seguros',
+    'Analista de Dados Sr',
+    'Venha contribuir com o nosso time de dados.',
+    'A',
+    4
   );
 
 INSERT INTO
   tb_applications (job_id, person_id)
 VALUES
   (1, 1),
-  (1, 2);
+  (1, 2),
+  (2, 3);
